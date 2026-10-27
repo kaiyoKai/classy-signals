@@ -121,4 +121,3 @@ pnpm build
 ⛷️ Is my Favorite Emoji of all time
 
 **License:** MIT
-**Author:** Kai K ([@kaiyoKai](https://github.com/kaiyoKai))
