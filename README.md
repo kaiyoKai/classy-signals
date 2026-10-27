@@ -120,4 +120,3 @@ pnpm build
 
 ⛷️ Is my Favorite Emoji of all time
 
-**License:** MIT
