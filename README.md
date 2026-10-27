@@ -25,10 +25,10 @@ A German computer-science students attempt at a utility library for the Signal P
 Unlike Proxies that trap every single property access at runtime, `classy-signals` collections (`ClassyArray`, `ClassyTypedArray`, etc.) are decoupled from the
 signal graph by default:
 
-* **`reactive = false` (Default):** Collections behave like fast native data structures with zero signal overhead during setup, bulk imports, or isolated algorithms.
+* **`reactive = false` (Default):** Collections behave like fast native data structures with no signal overhead (only the usual javascript object as a wrapper overhead i guess).
 * **Opt-In Reactivity:** Can be enabled directly via constructor `{ reactive: true }` or dynamically via `.setReactive(true)`.
 * **Automatic Store Promotion:** When passed into a class managed by `makeAutoObservable(this)`, the engine inspects the fields and automatically switches any attached Classy collection to `reactive = true`.
-* **Versioned Tracking:** Mutations just increment an internal `#version` signal (`Signal.State`), ensuring dependency notification without proxy overhead.
+* **Versioned Tracking:** Mutations just increment an internal `#version` signal (`Signal.State`).
 
 ---
 
@@ -103,9 +103,10 @@ export class BitmaskViewer extends SignalWatcher(LitElement) {
 
 Contributions, feedback, and discussions are very welcome!
 However, as this repository is primarily a students exploratory learning project around the TC39 Signals proposal and reactive patterns:
-**please do not submit fully AI-generated pull requests**.
+**please do not submit fully AI-generated pull requests**
 
-Handwritten code, thoughtful issues, and genuine architectural discussions are always appreciated.
+Handwritten code, is always appreciated 
+but I don't appreciate reading code no one bothered to write themselves.
 
 ---
 
