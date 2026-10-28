@@ -102,7 +102,7 @@ export class BitmaskViewer extends SignalWatcher(LitElement) {
 ## Contributing
 
 Contributions, feedback, and discussions are very welcome!
-However, as this repository is primarily a students exploratory learning project around the TC39 Signals proposal and reactive patterns:
+However, as this repository is primarily a students exploratory learning project:
 **please do not submit fully AI-generated pull requests**
 
 Handwritten code, is always appreciated 
