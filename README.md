@@ -5,7 +5,17 @@
 [![Dependencies](https://img.shields.io/badge/signal--polyfill-^0.2.2-green.svg)](https://www.npmjs.com/package/signal-polyfill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
+
 A German computer-science students attempt at a utility library for the Signal Polyfill, designed around the TC39 Stage 1 Proposal (as of October 2026) to support the integration of native, standardized signals into JavaScript.
+
+
+
+
+
+## 🚧 Status: Work in Progress (API Design & Architecture Phase) ##
+
+Core interfaces and broaddesign goals are pretty much defined, implementation and test suite are currently in active development.
+
 
 ## ⛷️ Inspirations ⛷️:
 
