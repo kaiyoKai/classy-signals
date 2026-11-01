@@ -1,11 +1,12 @@
+import { Signal } from "signal-polyfill";
+import { describe, it, expect } from "vite-plus/test";
+import { effect } from "../src/effect.js";
+
 it("should work", () => {
+  let count = new Signal.State(0);
+
   const stop = effect(() => {
     console.log("Count ist:", count.get());
     return () => console.log("Cleanup vor nächstem Run");
   });
 });
-// Und wie soll batch aussehen?
-batch(() => {
-  count.set(1);
-  count.set(2);
-}); // Läuft der effect 1x oder 2x?

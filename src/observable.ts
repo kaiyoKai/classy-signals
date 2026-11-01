@@ -1,7 +1,7 @@
 import type { MakeAutoObservable } from "./types.js";
 
 /**
- * makeAutoObservable(target, options?)
+ *
  *
  * TODO :
  * 1. Prüfen, ob target.constructor[SCHEMA] bereits gecacht ist.
