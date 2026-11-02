@@ -4,7 +4,6 @@ it("should work", () => {
     return () => console.log("Cleanup vor nächstem Run");
   });
 });
-// Und wie soll batch aussehen?
 batch(() => {
   count.set(1);
   count.set(2);

@@ -13,8 +13,15 @@ import type { IClassyArray } from "../types.js";
 export class ClassyArray<T> implements IClassyArray<T> {
   #storage: T[];
   #version = new Signal.State(0);
+  isReactive = false;
   constructor(initialStorage: T[] = []) {
     this.#storage = initialStorage;
+  }
+
+  private incrementVersionSignalIfReactive() {
+    if (this.isReactive) {
+      this.#version.set(this.#version.get() + 1);
+    }
   }
 
   get length(): number {
@@ -25,8 +32,14 @@ export class ClassyArray<T> implements IClassyArray<T> {
     throw new Error("TODO");
   }
 
+  get(index: number): T | undefined {
+    this.incrementVersionSignalIfReactive();
+    return this.#storage[index];
+  }
+
   at(index: number): T | undefined {
-    throw new Error("TODO");
+    this.incrementVersionSignalIfReactive();
+    return this.#storage.at(index);
   }
 
   push(...items: T[]): number {
